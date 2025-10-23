@@ -195,18 +195,10 @@
 //General function to get the appropriate size for the breasts
 /obj/item/proc/get_modular_breasts(obj/item/organ/genital/G)
 	var/size
-	if(G.genital_size <= 15)
+	if(G.genital_size <= 20)
 		size = G.genital_size
 	else
-		switch(G.genital_size)
-			if(16)
-				size = "huge"
-			if(17)
-				size = "massive"
-			if(18)
-				size = "giga"
-			if(19)
-				size = "impossible"
+		size = "20"
 	return "breasts_[size][get_breasts_alt()]"
 
 //Placeholder function for alternate variants of the breasts
