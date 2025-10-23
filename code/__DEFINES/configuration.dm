@@ -23,7 +23,7 @@
 
 // Flags for respawn config
 /// Respawn not allowed
-#define RESPAWN_FLAG_DISABLED 0
+#define RESPAWN_FLAG_DISABLED 1
 /// Respawn as much as you'd like
 #define RESPAWN_FLAG_FREE 1
 /// Can respawn, but not as the same character
