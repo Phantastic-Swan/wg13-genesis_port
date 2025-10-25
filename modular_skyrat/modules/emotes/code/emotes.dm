@@ -484,6 +484,22 @@
 	vary = TRUE
 	sound = 'world_genesis/sound/emotes/gurgle1.ogg'
 
+/datum/emote/living/fart //WG13 EDIT
+	key = "fart"
+	key_third_person = "farts"
+	message = "farts"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'world_genesis/sound/emotes/fart1.ogg'
+
+/datum/emote/living/brap //WG13 EDIT
+	key = "brap"
+	key_third_person = "braps"
+	message = "rips ass!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'world_genesis/sound/emotes/fart4.ogg'
+
 /mob/living/proc/do_ass_slap_animation(atom/slapped)
 	do_attack_animation(slapped, no_effect=TRUE)
 	var/image/gloveimg = image('icons/effects/effects.dmi', slapped, "slapglove", slapped.layer + 0.1)
