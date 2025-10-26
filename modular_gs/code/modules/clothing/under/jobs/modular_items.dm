@@ -65,7 +65,7 @@
 
 //The meat of the system, checks the genitals, compares to recorded size and request
 //the sprites if new ones are needed
-/obj/item/proc/update_modular_overlays(mob/user)
+/obj/item/proc/update_modular_overlays(mob/user, force_update = FALSE)
 	if(!iscarbon(user))
 		return
 	var/mob/living/carbon/U = user
@@ -98,7 +98,7 @@
 			if(breasts != mod_breasts_rec)
 				mod_breasts_rec = breasts
 				build_modular = TRUE
-	if(!build_modular)	//Stop early if no new sprites are needed
+	if(!build_modular && !force_update)	//Stop early if no new sprites are needed UPDATE: unless we force it	//Stop early if no new sprites are needed
 		return
 	delete_modular_overlays(U)	//Delete the old sprites
 
@@ -118,6 +118,7 @@
 			add_modular_overlay(U, mod_breasts_rec, MODULAR_BREASTS_LAYER, color)
 			add_modular_overlay(U, "[mod_breasts_rec]_NORTH", BREASTS_BEHIND_LAYER, color)
 			add_modular_overlay(U, "[mod_breasts_rec]_SOUTH", BREASTS_FRONT_LAYER, color)
+
 	U.update_body()
 	U.update_worn_undersuit()
 	U.update_worn_oversuit()
