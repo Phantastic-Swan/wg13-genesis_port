@@ -59,3 +59,38 @@
 		user.nextsoundemote = world.time + 7
 		playsound(user, 'world_genesis/sound/emotes/belch1.ogg', 50, 1, -1)
 	. = ..()
+
+/datum/emote/living/fart //Butt burp.
+	key = "fart"
+	key_third_person = "farts"
+	message = "farts"
+	//god hates me for this -Metha
+	//god will hate me more for this -Gabbr
+	emote_type = EMOTE_AUDIBLE
+	muzzle_ignore = FALSE
+	restraint_check = FALSE
+
+
+/datum/emote/living/fart/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'world_genesis/sound/emotes/fart1.ogg', 50, 1, -1)
+	. = ..()
+
+/datum/emote/living/brap //Butt burp but more.
+	key = "brap"
+	key_third_person = "braps"
+	message = "rips ass"
+	emote_type = EMOTE_AUDIBLE
+	muzzle_ignore = FALSE
+	restraint_check = FALSE
+
+/datum/emote/living/brap/run_emote(mob/living/user, params)
+	if(ishuman(user))
+		if(user.nextsoundemote >= world.time)
+			return
+		user.nextsoundemote = world.time + 7
+		playsound(user, 'world_genesis/sound/emotes/fart4.ogg', 50, 1, -1)
+	. = ..()

@@ -33,6 +33,7 @@
 	key_third_person = "farts"
 	message = "farts"
 	//god hates me for this -Metha
+	// god will hate me more for this -Gabbr
 	noise_type = "fart"
 	noise_pref = FARTING_NOISES
 
