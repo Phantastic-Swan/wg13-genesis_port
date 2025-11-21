@@ -450,6 +450,16 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	resistance_flags = FLAMMABLE
 	fishing_modifier = -2
 
+/obj/item/clothing/mask/gas/googly //WG13
+	name = "googly eyes"
+	desc = "For making things look sillier than they really are!"
+	icon_state = "googly"
+	inhand_icon_state = "owl_mask"
+	clothing_flags = MASKINTERNALS
+	flags_cover = MASKCOVERSEYES
+	resistance_flags = FLAMMABLE
+	fishing_modifier = -2
+
 /obj/item/clothing/mask/gas/carp
 	name = "carp mask"
 	desc = "Gnash gnash."
