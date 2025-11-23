@@ -359,3 +359,5 @@
 	name = "Chitter2"
 	id = "chitter2"
 	soundpath = 'modular_gs/sound/voice/barks/kazooie/chitter1.ogg'
+
+//Undertale Yellow

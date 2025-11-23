@@ -474,7 +474,13 @@
 	message = "belches!"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'world_genesis/sound/emotes/belch1.ogg'
+
+/datum/emote/living/belch/get_sound()
+	return pick('world_genesis/sound/emotes/belch1.ogg', 'world_genesis/sound/emotes/belch2.ogg',
+				'world_genesis/sound/emotes/belch3.ogg', 'world_genesis/sound/emotes/belch4.ogg',
+				'world_genesis/sound/emotes/belch5.ogg', 'world_genesis/sound/emotes/belch6.ogg',
+				'world_genesis/sound/emotes/belch7.ogg', 'world_genesis/sound/emotes/belch8.ogg',
+				'world_genesis/sound/emotes/belch9.ogg')
 
 /datum/emote/living/gurgle //WG13 EDIT
 	key = "gurgle"
@@ -482,7 +488,10 @@
 	message = "'s stomach gurgles"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'world_genesis/sound/emotes/gurgle1.ogg'
+
+/datum/emote/living/gurgle/get_sound()
+	return pick('world_genesis/sound/emotes/gurgle1.ogg', 'world_genesis/sound/emotes/gurgle2.ogg',
+				'world_genesis/sound/emotes/gurgle3.ogg')
 
 /datum/emote/living/fart //WG13 EDIT
 	key = "fart"
@@ -490,7 +499,10 @@
 	message = "farts"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'world_genesis/sound/emotes/fart1.ogg'
+
+/datum/emote/living/fart/get_sound()
+	return pick('world_genesis/sound/emotes/fart1.ogg', 'world_genesis/sound/emotes/fart2.ogg',
+				'world_genesis/sound/emotes/fart3.ogg', 'world_genesis/sound/emotes/fart4.ogg')
 
 /datum/emote/living/brap //WG13 EDIT
 	key = "brap"
@@ -498,7 +510,49 @@
 	message = "rips ass!"
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
-	sound = 'world_genesis/sound/emotes/fart4.ogg'
+
+/datum/emote/living/brap/get_sound()
+	return pick('world_genesis/sound/emotes/brap1.ogg', 'world_genesis/sound/emotes/brap2.ogg',
+				'world_genesis/sound/emotes/brap3.ogg', 'world_genesis/sound/emotes/brap4.ogg',
+				'world_genesis/sound/emotes/brap5.ogg', 'world_genesis/sound/emotes/brap6.ogg',
+				'world_genesis/sound/emotes/brap7.ogg', 'world_genesis/sound/emotes/brap8.ogg')
+
+/datum/emote/living/fscream //WG13 EDIT
+	key = "fscream"
+	key_third_person = "screams in disgust!"
+	message = "screams in disgust!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'world_genesis/sound/emotes/fscream.ogg'
+
+/datum/emote/living/sixscream //WG13 EDIT
+	key = "sixscream"
+	key_third_person = "screams in agony!"
+	message = "screams in agony"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'world_genesis/sound/emotes/96scream.ogg'
+
+/datum/emote/living/mowzscream //WG13 EDIT
+	key = "mowzscream"
+	key_third_person = "screams in agony!"
+	message = "screams in agony"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+	sound = 'world_genesis/sound/emotes/mowzscream.ogg'
+
+//datum/emote/living/vomit //WG13 EDIT
+	//key = "vomit"
+	//key_third_person = "vomits!"
+	//message = "vomits violently!"
+	//emote_type = EMOTE_VISIBLE
+	//vary = TRUE
+
+//datum/emote/living/vomit/run_emote(mob/living/user, params)
+	//. = ..()
+
+	//var/mob/living/puker = user
+	//vomit(puker)
 
 /mob/living/proc/do_ass_slap_animation(atom/slapped)
 	do_attack_animation(slapped, no_effect=TRUE)

@@ -436,3 +436,65 @@
 	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/Xenohiss.ogg'
 	minspeed = 10
 	maxspeed = 16
+
+//Undertale Yellow - WG13 Edit
+
+/datum/blooper/ace
+	name = "Ace"
+	id = "Ace"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_ace.ogg'
+	minvariance = 0
+
+/datum/blooper/ace
+	name = "Axis"
+	id = "Axis"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_axis.ogg'
+	minvariance = 0
+
+/datum/blooper/ceroba
+	name = "Ceroba"
+	id = "Ceroba"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_ceroba.ogg'
+	minvariance = 0
+
+/datum/blooper/ed
+	name = "Ed"
+	id = "Ed"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_ed.ogg'
+	minvariance = 0
+
+/datum/blooper/martlet
+	name = "Martlet"
+	id = "Martlet"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_martlet.ogg'
+	minvariance = 0
+
+/datum/blooper/starlo
+	name = "Starlo"
+	id = "Starlo"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_starlo.ogg'
+	minvariance = 0
+
+/datum/blooper/kanako
+	name = "Kanako"
+	id = "Kanako"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_kanako.ogg'
+	minvariance = 0
+
+/datum/blooper/moray
+	name = "Moray"
+	id = "Moray"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_moray.ogg'
+	minvariance = 0
+
+/datum/blooper/mooch
+	name = "Mooch"
+	id = "Mooch"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_mooch.ogg'
+	minvariance = 0
+
+/datum/blooper/mooch
+	name = "Chujin"
+	id = "Chujin"
+	soundpath = 'modular_zubbers/code/modules/blooper/voice/bloopers/undertale_yellow/snd_talk_chujin.ogg'
+	minvariance = 0
