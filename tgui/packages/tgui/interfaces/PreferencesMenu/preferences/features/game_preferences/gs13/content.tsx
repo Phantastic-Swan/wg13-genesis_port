@@ -1,4 +1,4 @@
-import { CheckboxInput, FeatureToggle } from '../../base';
+import { CheckboxInput, type FeatureToggle } from '../../base';
 
 export const weight_gain_food: FeatureToggle = {
   name: 'Weight gain from food',
@@ -45,5 +45,17 @@ export const weight_gain_nanites: FeatureToggle = {
 export const weight_gain_atmos: FeatureToggle = {
   name: 'Weight gain from atmos gasses',
   category: 'WG Sources',
+  component: CheckboxInput,
+};
+
+export const size_xwg: FeatureToggle = {
+  name: 'Enable XWG',
+  category: 'XWG',
+  component: CheckboxInput,
+};
+
+export const weight_size_scaling: FeatureToggle = {
+  name: 'Enable Weight Size Scaling',
+  category: 'XWG',
   component: CheckboxInput,
 };

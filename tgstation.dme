@@ -554,6 +554,7 @@
 #include "code\__DEFINES\~~gs_defines\DNA.dm"
 #include "code\__DEFINES\~~gs_defines\misc.dm"
 #include "code\__DEFINES\~~gs_defines\mobs.dm"
+#include "code\__DEFINES\~~gs_defines\signals.dm"
 #include "code\__DEFINES\~~gs_defines\traits.dm"
 #include "code\__HELPERS\_auxtools_api.dm"
 #include "code\__HELPERS\_dreamluau.dm"
@@ -6870,6 +6871,7 @@
 #include "modular_gs\code\datums\components\fattening_door.dm"
 #include "modular_gs\code\datums\status_effects\fatstun.dm"
 #include "modular_gs\code\game\plushes.dm"
+#include "modular_gs\code\modules\client\preferences\size.dm"
 #include "modular_gs\code\game\machinery\deployable.dm"
 #include "modular_gs\code\game\objects\tiles.dm"
 #include "modular_gs\code\game\objects\turfs.dm"
@@ -9970,5 +9972,6 @@
 #include "modular_zubbers\modules\wood_walls\code\mineral_walls.dm"
 #include "modular_zubbers\modules\wood_walls\code\new_floors.dm"
 #include "world_genesis\code\wg_vendors.dm"
+#include "world_genesis\code\immobilizer_cuffs.dm"
 // END_INCLUDE
 
