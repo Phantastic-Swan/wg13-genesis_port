@@ -63,8 +63,6 @@
 	var/graft_gene
 	///Determines if the plant should be allowed to mutate early at 30+ instability.
 	var/seed_flags = MUTATE_EARLY
-	///Determines if the plant has been sliced with a sharp tool to extract substances like saps.
-	var/extracted = 0
 
 /obj/item/seeds/Initialize(mapload, nogenes = FALSE)
 	. = ..()
@@ -81,18 +79,6 @@
 		icon_harvest = "[species]-harvest"
 
 	if(!nogenes)
-		// START Bubber edit
-		genes += new /datum/plant_gene/core/lifespan(lifespan)
-		genes += new /datum/plant_gene/core/endurance(endurance)
-		genes += new /datum/plant_gene/core/weed_rate(weed_rate)
-		genes += new /datum/plant_gene/core/weed_chance(weed_chance)
-		if(yield != -1)
-			genes += new /datum/plant_gene/core/yield(yield)
-			genes += new /datum/plant_gene/core/production(production)
-		if(potency != -1)
-			genes += new /datum/plant_gene/core/potency(potency)
-			genes += new /datum/plant_gene/core/instability(instability)
-		// END Bubber edit
 		for(var/plant_gene in genes)
 			if(ispath(plant_gene))
 				genes -= plant_gene
@@ -672,3 +658,11 @@
 			plant_overlay.icon_state = "[icon_grow][t_growthstate]"
 	plant_overlay.pixel_z = plant_icon_offset
 	return plant_overlay
+
+/// Called when the seed is set in a tray
+/obj/item/seeds/proc/on_planted(obj/machinery/hydroponics/parent)
+	return
+
+/// Called when the seed is removed from a tray - possibly from being harvested, possibly from being uprooted
+/obj/item/seeds/proc/on_unplanted(obj/machinery/hydroponics/parent)
+	return

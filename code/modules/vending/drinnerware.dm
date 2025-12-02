@@ -22,7 +22,7 @@
 			"name" = "Eating Utensils",
 			"icon" = FA_ICON_UTENSILS,
 			"products" = list(
-				/obj/item/kitchen/fork = 6,
+				/obj/item/kitchen/fork = 10,
 				/obj/item/kitchen/spoon = 10,
 			),
 		),
@@ -30,9 +30,9 @@
 			"name" = "Dinnerware",
 			"icon" = FA_ICON_PLATE_WHEAT,
 			"products" = list(
-				/obj/item/plate/small = 5,
-				/obj/item/plate = 10,
-				/obj/item/plate/large = 5,
+				/obj/item/plate/small = 30,
+				/obj/item/plate = 30,
+				/obj/item/plate/large = 30,
 				/obj/item/reagent_containers/cup/bowl = 30,
 				/obj/item/reagent_containers/cup/glass/drinkingglass = 8,
 			),

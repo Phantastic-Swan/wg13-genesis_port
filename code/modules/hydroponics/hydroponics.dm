@@ -529,18 +529,23 @@
 
 ///Sets a new value for the myseed variable, which is the seed of the plant that's growing inside the tray.
 /obj/machinery/hydroponics/proc/set_seed(obj/item/seeds/new_seed, delete_old_seed = TRUE)
-	var/old_seed = myseed
+	var/obj/item/seeds/old_seed = myseed
 	myseed = new_seed
+	for(var/datum/plant_gene/trait/gene in old_seed?.genes)
+		gene.on_unplanted_from_tray(src, old_seed)
 	if(old_seed && delete_old_seed)
 		qdel(old_seed)
 	set_plant_status(new_seed ? HYDROTRAY_PLANT_GROWING : HYDROTRAY_NO_PLANT) //To make sure they can't just put in another seed and insta-harvest it
 	if(myseed && myseed.loc != src)
 		myseed.forceMove(src)
 	SEND_SIGNAL(src, COMSIG_HYDROTRAY_SET_SEED, new_seed)
+	for(var/datum/plant_gene/trait/gene in myseed?.genes)
+		gene.on_plant_in_tray(src, myseed)
 	age = 0
 	update_appearance()
 	if(isnull(myseed))
 		remove_shared_particles(/particles/pollen)
+
 
 /*
  * Setter proc to set a tray to a new self_sustaining state and update all values associated with it.
@@ -938,12 +943,6 @@
 			to_chat(user, span_warning("This plot is completely devoid of weeds! It doesn't need uprooting."))
 			return
 
-	else if(O.sharpness) // Allows for the extraction (for opium or sap) interaction if a seed has it.
-		if(myseed && !myseed.extracted)
-			myseed.interact_with_atom(O, user, src)
-		else
-			return ..()
-
 	else if(istype(O, /obj/item/secateurs))
 		if(!myseed)
 			to_chat(user, span_notice("This plot is empty."))
@@ -1007,9 +1006,9 @@
 			to_chat(user, span_notice("The tray is empty."))
 			return
 		if(myseed.apply_graft(snip))
-			to_chat(user, span_notice("You carefully integrate the grafted plant limb onto [myseed.plantname], granting it [snip.stored_trait.get_name()]."))
+			to_chat(user, "<span class='notice'>You carefully integrate the grafted plant limb onto [myseed.plantname], granting it [snip.stored_trait.get_name()].</span>")
 		else
-			to_chat(user, span_notice("You integrate the grafted plant limb onto [myseed.plantname], but it does not accept the [snip.stored_trait.get_name()] trait from the [snip]."))
+			to_chat(user, "<span class='warning'>You integrate the grafted plant limb onto [myseed.plantname], but it does not accept the [snip.stored_trait.get_name()] trait from the [snip].</span>")
 		qdel(snip)
 		return
 
