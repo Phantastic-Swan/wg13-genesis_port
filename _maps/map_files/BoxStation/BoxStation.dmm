@@ -44005,6 +44005,10 @@
 	dir = 4
 	},
 /area/station/security/prison/safe)
+"fRV" = (
+/obj/structure/sign/poster/official/cheri_riveter,
+/turf/closed/wall,
+/area/station/service/bar)
 "fSb" = (
 /obj/structure/filingcabinet/white,
 /obj/machinery/power/apc/auto_name/directional/south,
@@ -51348,6 +51352,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/office)
+"joP" = (
+/obj/structure/sign/poster/official/wg_medplus,
+/turf/closed/wall,
+/area/station/command/heads_quarters/cmo)
 "joT" = (
 /turf/open/floor/plating/airless,
 /area/station/solars/starboard/aft)
@@ -82941,6 +82949,10 @@
 	},
 /turf/open/floor/circuit/red,
 /area/station/ai_monitored/turret_protected/ai_upload)
+"xvy" = (
+/obj/structure/sign/poster/official/wg_colonizer,
+/turf/closed/wall,
+/area/station/service/kitchen)
 "xvG" = (
 /obj/effect/turf_decal/stripes/white/line{
 	color = "#52B4E9";
@@ -121852,7 +121864,7 @@ aQc
 aXk
 fNG
 aBJ
-aJC
+fRV
 qff
 nHJ
 bev
@@ -123403,7 +123415,7 @@ hAr
 dvz
 aUq
 dkh
-bBN
+joP
 bmV
 hjZ
 bqW
@@ -124420,7 +124432,7 @@ aSP
 bmm
 aJI
 aJI
-aJI
+xvy
 aJI
 aJI
 bcq

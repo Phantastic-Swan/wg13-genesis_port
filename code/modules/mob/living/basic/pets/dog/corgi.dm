@@ -4,6 +4,7 @@
 	name = "\improper corgi"
 	real_name = "corgi"
 	desc = "They're a corgi."
+	icon = 'icons/mob/simple/pets.dmi'
 	icon_state = "corgi"
 	icon_living = "corgi"
 	icon_dead = "corgi_dead"
@@ -373,7 +374,7 @@
 			new /mob/living/basic/pet/dog/corgi/puppy/ian(target)
 			Write_Memory(FALSE)
 			return INITIALIZE_HINT_QDEL
-	else if(age == record_age)
+	else if(age == 99)
 		icon_state = "old_corgi"
 		icon_living = "old_corgi"
 		held_state = "old_corgi"

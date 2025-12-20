@@ -6871,7 +6871,6 @@
 #include "modular_gs\code\datums\components\fattening_door.dm"
 #include "modular_gs\code\datums\status_effects\fatstun.dm"
 #include "modular_gs\code\game\plushes.dm"
-#include "modular_gs\code\modules\client\preferences\size.dm"
 #include "modular_gs\code\game\machinery\deployable.dm"
 #include "modular_gs\code\game\objects\tiles.dm"
 #include "modular_gs\code\game\objects\turfs.dm"
@@ -6904,6 +6903,7 @@
 #include "modular_gs\code\modules\client\preferences\fatness_preferences.dm"
 #include "modular_gs\code\modules\client\preferences\genital_layering.dm"
 #include "modular_gs\code\modules\client\preferences\genitals.dm"
+#include "modular_gs\code\modules\client\preferences\size.dm"
 #include "modular_gs\code\modules\client\preferences\wg_source_preferences.dm"
 #include "modular_gs\code\modules\clothing\under\jobs\modular_items.dm"
 #include "modular_gs\code\modules\food_and_drinks\bigbottle.dm"
@@ -9971,7 +9971,7 @@
 #include "modular_zubbers\modules\taur_mechanics\taur_clothing_offset.dm"
 #include "modular_zubbers\modules\wood_walls\code\mineral_walls.dm"
 #include "modular_zubbers\modules\wood_walls\code\new_floors.dm"
-#include "world_genesis\code\wg_vendors.dm"
 #include "world_genesis\code\immobilizer_cuffs.dm"
+#include "world_genesis\code\wg_vendors.dm"
 // END_INCLUDE
 

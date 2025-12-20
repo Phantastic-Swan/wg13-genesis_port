@@ -28,8 +28,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/random, 32)
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/here_for_your_safety, 32)
 
 /obj/structure/sign/poster/official/nanotrasen_logo
-	name = "\improper Nanotrasen logo"
-	desc = "A poster depicting the Nanotrasen logo."
+	name = "\improper Genesis logo"
+	desc = "A poster depicting the Genesis logo."
 	icon_state = "nanotrasen_logo"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/nanotrasen_logo, 32)
@@ -429,3 +429,26 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/boombox, 32)
 	icon_state = "download_gun"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/download, 32)
+
+//WORLD GENESIS POSTERS
+
+/obj/structure/sign/poster/official/cheri_riveter
+	name = "Cheri the Riveter"
+	desc = "We can do it! A guardian angel for every working man!"
+	icon_state = "cheri_riveter"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/wg_colonizer, 32)
+
+/obj/structure/sign/poster/official/wg_colonizer
+	name = "World Genesis Poster - Colonizer"
+	desc = "A poster that promotes outer-sector colonization by World Genesis."
+	icon_state = "wg_colonizer"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/wg_medplus, 32)
+
+/obj/structure/sign/poster/official/wg_medplus
+	name = "MedPlus Service Advertisement"
+	desc = "A poster that advertises the WG13 MedPlus service."
+	icon_state = "wg_medplus"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/official/wg_medplus, 32)

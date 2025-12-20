@@ -427,10 +427,10 @@
 		ui.open()
 
 /obj/structure/sign/delam_procedure
-	name = "Safety Moth - Delamination Emergency Procedure"
-	desc = "This informational sign uses Safety Moth™ to tell the viewer how to use the emergency stop button if the Supermatter Crystal is delaminating."
+	name = "SM Crystal Delamination Emergency Procedure"
+	desc = "This informational sign features a panicking engineer telling the viewer how to use the emergency stop button if the Supermatter Crystal is delaminating."
 	icon = 'modular_skyrat/modules/delam_emergency_stop/icons/scram.dmi'
-	icon_state = "moff-poster"
+	icon_state = "tomo-poster"
 	pixel_y = 4
 	armor_type = /datum/armor/sign_delam
 	anchored = TRUE

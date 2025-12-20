@@ -1,7 +1,7 @@
 
 /obj/machinery/vending/cola
-	name = "\improper Robust Softdrinks"
-	desc = "A soft drinks vendor provided by Robust Industries, LLC."
+	name = "The Fizzler"
+	desc = "The proprietary soda vendor for World Genesis Investment Group!"
 	icon_state = "Cola_Machine"
 	panel_type = "panel2"
 	product_slogans = "Robust Softdrinks: More robust than a toolbox to the head!"
