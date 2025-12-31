@@ -64,6 +64,7 @@
 			"name" = "Jumpsuits",
 			"icon" = "shirt",
 			"products" = list(
+				/obj/item/clothing/under/color/grey = 16,
 				/obj/item/clothing/under/color/grey/cargo = 16,
 				/obj/item/clothing/under/color/grey/medical= 16,
 				/obj/item/clothing/under/color/grey/science = 16,

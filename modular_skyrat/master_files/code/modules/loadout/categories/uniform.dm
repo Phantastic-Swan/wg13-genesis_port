@@ -23,6 +23,9 @@
 /*
 *	JUMPSUITS
 */
+/datum/loadout_item/uniform/jumpsuit/modular
+	name = "Modular Jumpsuit"
+	item_path = /obj/item/clothing/under/color/grey
 
 /datum/loadout_item/uniform/jumpsuit/greyscale
 	name = "Greyscale Jumpsuit"
