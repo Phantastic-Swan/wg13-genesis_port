@@ -285,7 +285,7 @@
 	if(mode == "thin")
 		if(cell.charge() < cell.max_charge() && target.fatness_real > 0)
 			var/BFI_burned = min(target.fatness_real, intensity)
-			target.adjust_fatness(BFI_burned, FATTENING_TYPE_ITEM)
+			target.adjust_fatness(-BFI_burned, FATTENING_TYPE_ITEM)
 			cell.give(BFI_burned * 250)	// with intensity 20, at most 5000 Joules
 			new /obj/effect/temp_visual/heal(get_turf(target), "#1100ff")
 		else
