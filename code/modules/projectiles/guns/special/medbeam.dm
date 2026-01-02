@@ -137,6 +137,9 @@
 	STOP_PROCESSING(SSobj, src) //Mech mediguns do not process until installed, and are controlled by the holder obj
 
 //////////////////////////Caloray///////////////////////////////////////
+
+#define CALORAY_DEFAULT_INTENSITY 20
+
 /obj/item/gun/medbeam/caloray
 	name = "Caloray"
 	desc = "A device that uses gainium shards to siphon calories from organic beings."
@@ -146,7 +149,8 @@
 	var/powerbeam = "r_beam"
 	var/calgen = 0
 	var/opened = FALSE
-	var/intensity = 10
+	var/intensity = CALORAY_DEFAULT_INTENSITY
+	var/power_use = STANDARD_CELL_CHARGE * 5 / (10 * CALORAY_DEFAULT_INTENSITY)	// value in joules, with 20 intensity, it will result in 10% of the capacity of the default cell
 	var/cell_type = /obj/item/stock_parts/power_store/cell/upgraded/plus
 	var/obj/item/stock_parts/power_store/cell/cell
 
@@ -156,14 +160,20 @@
 	if(!cell && cell_type)
 		cell = new cell_type
 		cell.charge = 0
+	update_icon_state()
+
+/obj/item/gun/medbeam/caloray/charged/Initialize(mapload)
+	. = ..()
+	cell.charge = cell.max_charge()
+	update_icon_state()
 
 /obj/item/gun/medbeam/caloray/examine(mob/user)
 	. = ..()
 
-	. += span_notice("It is currently set to [mode] at [intensity*2]% intensity.")
+	. += span_notice("It is currently set to [mode] at [intensity]% intensity.")
 
 	if (cell)
-		. += span_notice("It's cell is [(cell.charge/cell.max_charge())*100]% charged.")
+		. += span_notice("It's cell is [cell.percent()]% charged.")
 	else
 		. += span_notice("It has no power cell installed.")
 	
@@ -202,7 +212,7 @@
 		cell = null
 		playsound(user, 'sound/items/weapons/gun/general/ionpulse.ogg', 60, 1)
 
-	if(opened == TRUE && cell == null)
+	else if(opened == TRUE && isnull(cell))
 		user.visible_message(span_warning("The Caloray doesn't have a power cell installed."))
 	
 	update_icon_state()
@@ -213,7 +223,7 @@
 		if(opened == FALSE)
 			to_chat(user, span_notice("You open the Caloray's battery compartment."))
 			opened = TRUE
-		if(opened == TRUE)
+		else
 			to_chat(user, span_notice("You close the Caloray's battery compartment."))
 			opened = FALSE
 
@@ -239,6 +249,9 @@
 		
 		update_icon_state()
 
+/obj/item/gun/medbeam/caloray/LoseTarget()
+	. = ..()
+	update_icon_state()
 
 /obj/item/gun/medbeam/caloray/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(isliving(user))
@@ -261,23 +274,20 @@
 
 /obj/item/gun/medbeam/caloray/on_beam_tick(mob/living/carbon/target)
 	if(mode == "fatten")
-		if(cell.charge() > 0)
-			if(target.fatness_real != FATNESS_LEVEL_19)
-				target.fatness_real += 20
-				// cell.charge -= ((cell.max_charge()/100)*10)
-				cell.use(cell.max_charge() / 10)
-				new /obj/effect/temp_visual/heal(get_turf(target), "#ff0000")
+		if(cell.charge() > 0 && target.fatness_real < FATNESS_LEVEL_19)
+			var/energy_used = cell.use(power_use * intensity, TRUE)
+			target.fatness_real += energy_used / 250	// assuming energy_used = power_use, this will result in a maximum of 20 BFI
+			new /obj/effect/temp_visual/heal(get_turf(target), "#ff0000")
 		else
 			LoseTarget()
 			return
 
 	if(mode == "thin")
-		if(cell.charge() < cell.max_charge())
-			if(target.fatness_real != 0)
-				target.fatness_real -= 20
-				// cell.charge += ((cell.max_charge()/100)*10)
-				cell.give(cell.max_charge() / 10)
-				new /obj/effect/temp_visual/heal(get_turf(target), "#1100ff")
+		if(cell.charge() < cell.max_charge() && target.fatness_real > 0)
+			var/BFI_burned = min(target.fatness_real, intensity)
+			target.fatness_real -= BFI_burned
+			cell.give(BFI_burned * 250)	// with intensity 20, at most 5000 Joules
+			new /obj/effect/temp_visual/heal(get_turf(target), "#1100ff")
 		else
 			LoseTarget()
 			return
@@ -289,3 +299,5 @@
 /obj/item/gun/medbeam/caloray/mech/Initialize(mapload)
 	. = ..()
 	STOP_PROCESSING(SSobj, src) //Mech mediguns do not process until installed, and are controlled by the holder obj
+
+#undef CALORAY_DEFAULT_INTENSITY
