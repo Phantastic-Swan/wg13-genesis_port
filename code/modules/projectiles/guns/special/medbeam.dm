@@ -276,7 +276,7 @@
 	if(mode == "fatten")
 		if(cell.charge() > 0 && target.fatness_real < FATNESS_LEVEL_19)
 			var/energy_used = cell.use(power_use * intensity, TRUE)
-			target.fatness_real += energy_used / 250	// assuming energy_used = power_use, this will result in a maximum of 20 BFI
+			target.adjust_fatness(energy_used / 250, FATTENING_TYPE_ITEM)	// assuming energy_used = power_use, this will result in a maximum of 20 BFI
 			new /obj/effect/temp_visual/heal(get_turf(target), "#ff0000")
 		else
 			LoseTarget()
@@ -285,7 +285,7 @@
 	if(mode == "thin")
 		if(cell.charge() < cell.max_charge() && target.fatness_real > 0)
 			var/BFI_burned = min(target.fatness_real, intensity)
-			target.fatness_real -= BFI_burned
+			target.adjust_fatness(BFI_burned, FATTENING_TYPE_ITEM)
 			cell.give(BFI_burned * 250)	// with intensity 20, at most 5000 Joules
 			new /obj/effect/temp_visual/heal(get_turf(target), "#1100ff")
 		else
