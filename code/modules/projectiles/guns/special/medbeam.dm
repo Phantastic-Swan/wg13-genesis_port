@@ -139,32 +139,34 @@
 //////////////////////////Caloray///////////////////////////////////////
 
 #define CALORAY_DEFAULT_INTENSITY 20
+#define MODE_FATTEN	"fatten"
+#define MODE_THIN	"thin"
 
 /obj/item/gun/medbeam/caloray
 	name = "Caloray"
 	desc = "A device that uses gainium shards to siphon calories from organic beings."
 	icon_state = "caloray_push"
 	
-	var/mode = "fatten"
+	var/mode = MODE_FATTEN
 	var/powerbeam = "r_beam"
-	var/calgen = 0
 	var/opened = FALSE
 	var/intensity = CALORAY_DEFAULT_INTENSITY
 	var/power_use = STANDARD_CELL_CHARGE * 5 / (10 * CALORAY_DEFAULT_INTENSITY)	// value in joules, with 20 intensity, it will result in 10% of the capacity of the default cell
-	var/cell_type = /obj/item/stock_parts/power_store/cell/upgraded/plus
 	var/obj/item/stock_parts/power_store/cell/cell
 
 /obj/item/gun/medbeam/caloray/Initialize(mapload)
 	. = ..()
-	START_PROCESSING(SSobj, src)
-	if(!cell && cell_type)
-		cell = new cell_type
-		cell.charge = 0
+	update_icon_state()
+
+/obj/item/gun/medbeam/caloray/empty_cell/Initialize(mapload)
+	. = ..()
+	cell = new /obj/item/stock_parts/power_store/cell/upgraded/plus
+	cell.charge = 0
 	update_icon_state()
 
 /obj/item/gun/medbeam/caloray/charged/Initialize(mapload)
 	. = ..()
-	cell.charge = cell.max_charge()
+	cell = new /obj/item/stock_parts/power_store/cell/upgraded/plus
 	update_icon_state()
 
 /obj/item/gun/medbeam/caloray/examine(mob/user)
@@ -186,24 +188,24 @@
 		icon_state = "caloray_off"
 		return
 	
-	if(mode == "fatten")
+	if(mode == MODE_FATTEN)
 		icon_state = "caloray_push"
 	
-	if(mode == "thin")
+	if(mode == MODE_THIN)
 		icon_state = "caloray_pull"
 
 
 /obj/item/gun/medbeam/caloray/attack_self(mob/user)
 	if(opened == FALSE)
 		playsound(user, 'sound/items/weapons/gun/general/slide_lock_1.ogg', 60, 1)
-		if (mode == "fatten")
+		if (mode == MODE_FATTEN)
 			to_chat(user, span_notice("You change the setting on the beam to thin."))
 			powerbeam = "b_beam"
-			mode = "thin"
+			mode = MODE_THIN
 		else
 			to_chat(user, span_notice("You change the setting on the beam to fatten."))
 			powerbeam = "r_beam"
-			mode = "fatten"
+			mode = MODE_FATTEN
 
 	if(opened == TRUE && cell)
 		user.visible_message("[user] removes [cell] from [src]!", span_notice("You remove [cell]."))
@@ -242,9 +244,9 @@
 		to_chat(user, span_notice("You insert [item] into [src]."))
 		cell = item
 
-		if(mode == "fatten")
+		if(mode == MODE_FATTEN)
 			powerbeam = "r_beam"
-		if(mode == "thin")
+		if(mode == MODE_THIN)
 			powerbeam = "b_beam"
 		
 		update_icon_state()
@@ -261,6 +263,15 @@
 		LoseTarget()
 	if(!isliving(target))
 		return
+	
+	if(isnull(cell))
+		return
+	
+	if(cell.charge() == 0 && mode != MODE_THIN)
+		return
+	
+	if(cell.charge() == cell.max_charge() && mode != MODE_FATTEN)
+		return
 
 	current_target = target
 	active = TRUE
@@ -273,7 +284,7 @@
 	return TRUE
 
 /obj/item/gun/medbeam/caloray/on_beam_tick(mob/living/carbon/target)
-	if(mode == "fatten")
+	if(mode == MODE_FATTEN)
 		if(cell.charge() > 0 && target.fatness_real < FATNESS_LEVEL_19)
 			var/energy_used = cell.use(power_use * intensity, TRUE)
 			target.adjust_fatness(energy_used / 250, FATTENING_TYPE_ITEM)	// assuming energy_used = power_use, this will result in a maximum of 20 BFI
@@ -282,7 +293,7 @@
 			LoseTarget()
 			return
 
-	if(mode == "thin")
+	if(mode == MODE_THIN)
 		if(cell.charge() < cell.max_charge() && target.fatness_real > 0)
 			var/BFI_burned = min(target.fatness_real, intensity)
 			target.adjust_fatness(-BFI_burned, FATTENING_TYPE_ITEM)
@@ -291,6 +302,7 @@
 		else
 			LoseTarget()
 			return
+	update_icon_state()
 
 //////////////////////////////Mech Version///////////////////////////////
 /obj/item/gun/medbeam/caloray/mech
@@ -301,3 +313,5 @@
 	STOP_PROCESSING(SSobj, src) //Mech mediguns do not process until installed, and are controlled by the holder obj
 
 #undef CALORAY_DEFAULT_INTENSITY
+#undef MODE_FATTEN
+#undef MODE_THIN
