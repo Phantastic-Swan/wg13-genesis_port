@@ -42,9 +42,9 @@
 	icon_state = "mburger"
 	crunch_value = 15
 
-/obj/item/metal_food/mburger_calorite
-	name = "Calorite Burger"
-	icon_state = "mburger_calorite"
+/obj/item/metal_food/mburger_gainium
+	name = "Gainium Burger"
+	icon_state = "mburger_gainium"
 	crunch_value = 35
 
 /obj/item/metal_food/mram

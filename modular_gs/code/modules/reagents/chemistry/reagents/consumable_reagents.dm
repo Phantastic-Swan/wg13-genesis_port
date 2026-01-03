@@ -70,21 +70,21 @@
 	else
 		return ..()
 
-// calorite blessing chem, used in the golem ability
+// gainium blessing chem, used in the golem ability
 
-/datum/reagent/consumable/caloriteblessing
-	name = "Calorite blessing"
-	description = "A strange, viscous liquid derived from calorite. It is said to have physically enhancing properties surprisingly unrelated to weight gain when consumed"
+/datum/reagent/consumable/gainiumblessing
+	name = "Gainium blessing"
+	description = "A strange, viscous liquid derived from gainium. It is said to have physically enhancing properties surprisingly unrelated to weight gain when consumed"
 	color = "#eb6e00"
 	taste_description = "sweet salvation"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 
-/datum/reagent/consumable/caloriteblessing/on_mob_metabolize(mob/living/L)
+/datum/reagent/consumable/gainiumblessing/on_mob_metabolize(mob/living/L)
 	..()
 	L.add_movespeed_modifier(/datum/movespeed_modifier/reagent/stimulants)
 
 
-/datum/reagent/consumable/caloriteblessing/on_mob_end_metabolize(mob/living/L)
+/datum/reagent/consumable/gainiumblessing/on_mob_end_metabolize(mob/living/L)
 	L.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/stimulants)
 	..()
 

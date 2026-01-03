@@ -10,12 +10,12 @@
 	name = "Saunas"
 	icon_state = "dk_yellow"
 
-/area/xenoarch/caloriteresearch_powered
+/area/xenoarch/gainiumresearch_powered
 	name = "Research Facility Ruins"
 	icon_state = "dk_yellow"
 	power_light = TRUE
 
-/area/xenoarch/caloriteresearch_unpowered
+/area/xenoarch/gainiumresearch_unpowered
 	name = "Research Facility Ruins"
 	icon_state = "dk_yellow"
 	power_light = TRUE

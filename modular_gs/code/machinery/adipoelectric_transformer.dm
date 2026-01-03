@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(adipoelectric_transformer)
 
 /obj/machinery/adipoelectric_transformer
 	name = "adipoelectric transformer"
-	desc = "This device uses calorite technology to store excess current in the wire it's placed on into whoever steps on!"
+	desc = "This device uses gainium technology to store excess current in the wire it's placed on into whoever steps on!"
 	icon = 'modular_gs/icons/obj/adipoelectric_transformer.dmi'
 	icon_state = "state_off"
 	density = FALSE
@@ -156,7 +156,7 @@ GLOBAL_LIST_EMPTY(adipoelectric_transformer)
 	req_components = list(
 		/obj/item/stock_parts/capacitor = 5,
 		/obj/item/stack/sheet/glass = 1,
-		/obj/item/stack/sheet/mineral/calorite = 1)
+		/obj/item/stack/sheet/mineral/gainium = 1)
 
 /datum/design/board/adipoelectric_transformer
 	name = "Machine Design (Adipoelectric Transformer Board)"

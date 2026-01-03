@@ -44,33 +44,33 @@
 	<br><br>\
 	You are able to use the console and pad to send victims back to the station after you are done with them. Avoid sending them anywhere dangerous or obvious unless you want to risk the ire of GATO. "
 
-// calorite research facility
+// gainium research facility
 
-/obj/item/paper/fluff/ruins/calorite_facility/note1
+/obj/item/paper/fluff/ruins/gainium_facility/note1
 	name = "Research Department - Report #1"
 	info = "The facility appears to be ready for usage. We've already imported a couple willing subjects, currently waiting in their designated areas. The testing shall begin according to the schedule."
 
-/obj/item/paper/fluff/ruins/calorite_facility/note4
+/obj/item/paper/fluff/ruins/gainium_facility/note4
 	name = "Research Department - Report #4"
 	info = "I'm aware of the fact that we're pioneers in this field of science, but this facility seems a little... oddly designed? In the next designs or iterations, instruct the architects to provide larger, more secluded labs. Why do we even need those three conveyor belts?"
 
-/obj/item/paper/fluff/ruins/calorite_facility/note18
+/obj/item/paper/fluff/ruins/gainium_facility/note18
 	name = "Research Department - Report #18"
 	info = "The research is going excellently, though the miners have reported strange figures seemingly observing them within the mining shafts. I've suggested that it's just fauna, but they insist that it's unlike anything they've ever seen before... and yet they can never describe those things. Just to keep morale high, please send more security supplies."
 
-/obj/item/paper/fluff/ruins/calorite_facility/note37
+/obj/item/paper/fluff/ruins/gainium_facility/note37
 	name = "Research Department - Report #37"
 	info = "I'm not sure who I'm writing this paper for. The connection with HQ has been severed days ago and since then, half of our personnel has gone missing. I swear someone's sabotaging this fucking place too... Until someone fixes the telecomms relay, I'll probably hide myself in the medbay. Seems like the safest place."
 
-/obj/item/paper/fluff/ruins/calorite_facility/security_note
+/obj/item/paper/fluff/ruins/gainium_facility/security_note
 	name = "Scribbled note"
 	info = "Funny work so far, but admittedly pretty easy.  I'm only supposed to not touch the orange junk and rally up some lardasses and-- let's be real, how much harm can someone like that do?"
 
-/obj/item/paper/fluff/ruins/calorite_facility/engineer_note
+/obj/item/paper/fluff/ruins/gainium_facility/engineer_note
 	name = "Oil-stained note"
 	info = "Please tell those fucking deadbrained amoebas at HQ that a full facility needs a PROPER engine, not a bunch of fucking PACMANs. Even a damned SM shard would suffice..."
 
-/obj/item/paper/fluff/ruins/calorite_facility/charred
+/obj/item/paper/fluff/ruins/gainium_facility/charred
 	name = "Charred note"
 	info = "They've g-- -all, -- s--en. Cloak-d fig----, ---...(the rest of the note seems unreadable)"
 
@@ -538,7 +538,7 @@
                 <h1><u>Chapter 4</u></h1>
                 <h2>GS13: Current development projects</h2>
 				<p>
-				(GS13 SECTOR PRINT EXCLUSIVE SECTION) As an employee of our thirteenth General Station, you've chosen (or have been chosen) to become a pioneer in some of our R&D projects! GS13 has been located in a relatively peaceful area of one of the rim-systems, home to immensely rare mineral known as "Calorite", exclusive to this sector! You'll get a chance to make your name in history by helping us furthen our knowledge of this strange material. Additionally, please be aware of employee shortages: GS13's location makes it a challenge to properly deliver supplies, but GATO assures you - you have nothing to worry about!
+				(GS13 SECTOR PRINT EXCLUSIVE SECTION) As an employee of our thirteenth General Station, you've chosen (or have been chosen) to become a pioneer in some of our R&D projects! GS13 has been located in a relatively peaceful area of one of the rim-systems, home to immensely rare mineral known as "Gainium", exclusive to this sector! You'll get a chance to make your name in history by helping us furthen our knowledge of this strange material. Additionally, please be aware of employee shortages: GS13's location makes it a challenge to properly deliver supplies, but GATO assures you - you have nothing to worry about!
 				<p>
 				Got it? Good! Now you understand all that you might need to know about Gato Industrial Concern!
 				<p>
@@ -967,12 +967,12 @@
 
 //GS13's gateway map
 
-/obj/item/paper/fluff/ruins/gateway_fats/caloriteslime1
-	name = "Day 5 - Calorite Slime Specimen"
-	info = "We finally got the calorite slime specimen to react - it began to self-produce lipoifier wherever it went, along with making subtle traces of lipoifium every now and then. Any contact without protection results in almost immediate immobilization. Jay Cobb has been smacking it with a cattle prod for a good 5 hours now. I hope it doesn't escape."
+/obj/item/paper/fluff/ruins/gateway_fats/gainiumslime1
+	name = "Day 5 - Gainium Slime Specimen"
+	info = "We finally got the gainium slime specimen to react - it began to self-produce lipoifier wherever it went, along with making subtle traces of lipoifium every now and then. Any contact without protection results in almost immediate immobilization. Jay Cobb has been smacking it with a cattle prod for a good 5 hours now. I hope it doesn't escape."
 
-/obj/item/paper/fluff/ruins/gateway_fats/caloriteslime2
-	name = "Day 6 - Calorite Slime Specimen"
+/obj/item/paper/fluff/ruins/gateway_fats/gainiumslime2
+	name = "Day 6 - Gainium Slime Specimen"
 	info = "It escaped."
 
 /obj/item/paper/fluff/ruins/gateway_fats/candyland_shack
@@ -1008,7 +1008,7 @@
 	info = "Tell that cunt Jerry from requisitions that if he ever steals my lunch again, I'm gonna lock him in a room with 10 of those creepy floating orange hands."
 
 /obj/item/paper/fluff/ruins/gateway_fats/facility_report7
-	name = "Report #383 C28 - Prolonged Exposure to Calorite and Calorite-Derived Products"
+	name = "Report #383 C28 - Prolonged Exposure to Gainium and Gainium-Derived Products"
 	info = "(the entire paper is covered in some sort of grease, smudging all the ink and making it unreadable...)"
 
 /obj/item/paper/fluff/ruins/gateway_fats/facility_report8

@@ -576,7 +576,7 @@
 
 	new /obj/item/stack/sheet/cardboard(Tsec)
 	new /obj/item/assembly/prox_sensor(Tsec)
-	new /obj/item/stack/sheet/mineral/calorite(Tsec)
+	new /obj/item/stack/sheet/mineral/gainium(Tsec)
 
 	if(reagent_glass)
 		drop_part(reagent_glass, Tsec)

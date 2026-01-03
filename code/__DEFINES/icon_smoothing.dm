@@ -240,7 +240,7 @@ DEFINE_BITFIELD(smoothing_junction, list(
 #define SMOOTH_GROUP_PLATFORMS_PAPER S_OBJ(86) ///obj/structure/platform/paper
 
 //GS13 EDIT
-#define SMOOTH_GROUP_CALORITE_WALL S_OBJ(78) // I'm of the same opinion as the last guy
+#define SMOOTH_GROUP_GAINIUM_WALL S_OBJ(78) // I'm of the same opinion as the last guy
 // also none of us noticed that we lost the "S" in WALLS
 //GS13 END EDIT
 

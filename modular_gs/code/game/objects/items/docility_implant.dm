@@ -161,7 +161,7 @@
 	name = "Docility Implant"
 	id = "docility_implant"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 5000, /datum/material/glass = 1500, /datum/material/calorite = 1500, /datum/material/silver = 1500)
+	materials = list(/datum/material/iron = 5000, /datum/material/glass = 1500, /datum/material/gainium = 1500, /datum/material/silver = 1500)
 	build_path = /obj/item/implantcase/docile
 	category = list("Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY
@@ -170,7 +170,7 @@
 	name = "Livestock Implant"
 	id = "livestock_implant"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 5000, /datum/material/glass = 3000, /datum/material/calorite = 3000, /datum/material/silver = 1500)
+	materials = list(/datum/material/iron = 5000, /datum/material/glass = 3000, /datum/material/gainium = 3000, /datum/material/silver = 1500)
 	build_path = /obj/item/implantcase/docile/livestock
 	category = list("Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY

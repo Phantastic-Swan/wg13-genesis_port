@@ -2,7 +2,7 @@
 	name = "Basic Fatoray"
 	id = "fatoray_weak"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 400, /datum/material/glass = 300, /datum/material/calorite = 500)
+	materials = list(/datum/material/iron = 400, /datum/material/glass = 300, /datum/material/gainium = 500)
 	construction_time = 75
 	build_path = /obj/item/gun/energy/fatoray/weak
 	category = list(
@@ -14,7 +14,7 @@
 	name = "Basic Cannonshot Fatoray"
 	id = "fatoray_cannon_weak"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/calorite = 1000)
+	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/gainium = 1000)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/fatoray/cannon_weak
 	category = list(
@@ -26,7 +26,7 @@
 	name = "AL-T-Ray: Metabolism"
 	id = "alter_ray_metabolism"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/calorite = 1300)
+	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/gainium = 1300)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/laser/alter_ray/gainrate
 	category = list(
@@ -39,7 +39,7 @@
 	name = "AL-T-Ray: Reverser"
 	id = "alter_ray_reverser"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/calorite = 1300)
+	materials = list(/datum/material/iron = 500, /datum/material/glass = 400, /datum/material/gainium = 1300)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/laser/alter_ray/noloss
 	category = list(
@@ -53,7 +53,7 @@
 // 	id = "borg_upgrade_fatoray"
 // 	build_type = MECHFAB
 // 	build_path = /obj/item/borg/upgrade/fatoray
-// 	materials = list(/datum/material/iron = 400, /datum/material/glass = 300, /datum/material/calorite = 500)
+// 	materials = list(/datum/material/iron = 400, /datum/material/glass = 300, /datum/material/gainium = 500)
 // 	construction_time = 100
 // 	category = list(
 // 		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SECURITY
