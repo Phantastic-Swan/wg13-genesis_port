@@ -8,7 +8,7 @@
 	name = "Basic Fatoray"
 	id = "fatoray_weak"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 8000, /datum/material/glass = 6000, /datum/material/calorite = 10000)
+	materials = list(/datum/material/iron = 8000, /datum/material/glass = 6000, /datum/material/gainium = 10000)
 	construction_time = 75
 	build_path = /obj/item/gun/energy/fatoray/weak
 	category = list("Weapons")
@@ -18,7 +18,7 @@
 	name = "Basic Cannonshot Fatoray"
 	id = "fatoray_cannon_weak"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/calorite = 20000)
+	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/gainium = 20000)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/fatoray/cannon_weak
 	category = list("Weapons")
@@ -28,7 +28,7 @@
 	name = "AL-T-Ray: Metabolism"
 	id = "alter_ray_metabolism"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/calorite = 26000)
+	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/gainium = 26000)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/laser/alter_ray/gainrate
 	category = list("Weapons")
@@ -39,21 +39,21 @@
 	name = "AL-T-Ray: Reverser"
 	id = "alter_ray_reverser"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/calorite = 26000)
+	materials = list(/datum/material/iron = 10000, /datum/material/glass = 8000, /datum/material/gainium = 26000)
 	construction_time = 200
 	build_path = /obj/item/gun/energy/laser/alter_ray/noloss
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SECURITY
 
 //nutritech tools
-/datum/design/calorite_collar
-	name = "Calorite Collar"
+/datum/design/gainium_collar
+	name = "Gainium Collar"
 	desc = "A collar that amplifies caloric intake of the wearer."
-	id = "calorite_collar"
+	id = "gainium_collar"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 1000, /datum/material/calorite = 4000)
+	materials = list(/datum/material/iron = 1000, /datum/material/gainium = 4000)
 	construction_time = 75
-	build_path = /obj/item/clothing/neck/petcollar/calorite
+	build_path = /obj/item/clothing/neck/petcollar/gainium
 	category = list("Equipment", "Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
@@ -62,7 +62,7 @@
 	desc = "A collar containing a miniaturized bluespace whitehole. Other bluespace transmitter collars can connect to this, causing the wearer to receive food from other transmitter collars directly into the stomach."
 	id = "bluespace_collar_receiver"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 1000, /datum/material/calorite = 2500, /datum/material/bluespace = 250)
+	materials = list(/datum/material/iron = 1000, /datum/material/gainium = 2500, /datum/material/bluespace = 250)
 	construction_time = 75
 	build_path = /obj/item/clothing/neck/petcollar/locked/bluespace_collar_receiver
 	category = list("Equipment", "Misc", "Medical Designs")
@@ -73,7 +73,7 @@
 	desc = "A collar containing a miniaturized bluespace blackhole. Can be connected to a bluespace collar receiver to transmit food to a linked receiver collar. "
 	id = "bluespace_collar_transmitter"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 1000, /datum/material/calorite = 1000, /datum/material/bluespace = 500)
+	materials = list(/datum/material/iron = 1000, /datum/material/gainium = 1000, /datum/material/bluespace = 500)
 	construction_time = 75
 	build_path = /obj/item/clothing/neck/petcollar/locked/bluespace_collar_transmitter
 	category = list("Equipment", "Misc", "Medical Designs")
@@ -129,7 +129,7 @@
 	id = "cookie_synthesizer"
 	build_type = PROTOLATHE
 	construction_time = 100
-	materials = list(/datum/material/silver = 4000, /datum/material/uranium = 1000, /datum/material/bluespace = 1000, /datum/material/calorite = 2000)
+	materials = list(/datum/material/silver = 4000, /datum/material/uranium = 1000, /datum/material/bluespace = 1000, /datum/material/gainium = 2000)
 	build_path = /obj/item/cookiesynth
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_SERVICE
@@ -149,7 +149,7 @@
 	id = "borg_upgrade_fatoray"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/fatoray
-	materials = list(/datum/material/iron = 8000, /datum/material/glass = 6000, /datum/material/calorite = 10000)
+	materials = list(/datum/material/iron = 8000, /datum/material/glass = 6000, /datum/material/gainium = 10000)
 	construction_time = 100
 	category = list("Cyborg Upgrade Modules")
 
@@ -158,7 +158,7 @@
 	id = "borg_upgrade_feedingtube"
 	build_type = MECHFAB
 	build_path = /obj/item/borg/upgrade/feedtube
-	materials = list(/datum/material/iron = 8000, /datum/material/glass = 6000, /datum/material/calorite = 10000)
+	materials = list(/datum/material/iron = 8000, /datum/material/glass = 6000, /datum/material/gainium = 10000)
 	construction_time = 100
 	category = list("Cyborg Upgrade Modules")
 

@@ -1,9 +1,9 @@
-/obj/structure/statue/calorite
+/obj/structure/statue/gainium
 	icon = 'modular_gs/icons/obj/statue.dmi'
 	max_integrity = 400
-	custom_materials = list(/datum/material/calorite = SHEET_MATERIAL_AMOUNT*5)
+	custom_materials = list(/datum/material/gainium = SHEET_MATERIAL_AMOUNT*5)
 
-/obj/structure/statue/calorite/fatty
+/obj/structure/statue/gainium/fatty
 	name = "Fatty statue"
 	desc = "A statue of a well-rounded fatso."
 	icon_state = "fatty"
@@ -11,13 +11,13 @@
 	var/last_event = 0
 	var/datum/proximity_monitor/proximity_monitor
 
-/obj/structure/statue/calorite/fatty/Initialize(mapload)
+/obj/structure/statue/gainium/fatty/Initialize(mapload)
 	. = ..()
 	proximity_monitor = new(src, 1, FALSE)
 	proximity_monitor.set_host(src, src)
 	// RegisterSignal(src, COMSIG_MOVABLE_CROSS, .proc/on_crossed)
 
-/obj/structure/statue/calorite/fatty/proc/beckon()
+/obj/structure/statue/gainium/fatty/proc/beckon()
 	if(!active)
 		if(world.time > last_event+15)
 			active = 1
@@ -28,7 +28,7 @@
 			return
 	return
 
-/obj/structure/statue/calorite/fatty/proc/statue_fatten(mob/living/carbon/M, touch = TRUE)
+/obj/structure/statue/gainium/fatty/proc/statue_fatten(mob/living/carbon/M, touch = TRUE)
 	if(!M.adjust_fatness(20, FATTENING_TYPE_ITEM))
 		to_chat(M, "<span class='warning'>Nothing happens.</span>")
 		return
@@ -50,24 +50,24 @@
 	else
 		to_chat(M, "<span class='warning'>You can barely reach the statue past your floor-covering stomach! And yet, it still calls to you...</span>")
 
-/obj/structure/statue/calorite/fatty/Bumped(atom/movable/AM)
+/obj/structure/statue/gainium/fatty/Bumped(atom/movable/AM)
 	beckon()
 	if(istype(AM, /mob/living/carbon))
 		statue_fatten(AM, FALSE)
 	..()
 
-/obj/structure/statue/calorite/fatty/HasProximity(atom/movable/entity)
+/obj/structure/statue/gainium/fatty/HasProximity(atom/movable/entity)
 	beckon()
 
-/obj/structure/statue/calorite/fatty/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
+/obj/structure/statue/gainium/fatty/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
 	beckon()
 	..()
 
-/obj/structure/statue/calorite/fatty/attackby(obj/item/W, mob/living/carbon/M, params)
+/obj/structure/statue/gainium/fatty/attackby(obj/item/W, mob/living/carbon/M, params)
 	statue_fatten(M)
 
-/obj/structure/statue/calorite/fatty/attack_hand(mob/living/carbon/M)
+/obj/structure/statue/gainium/fatty/attack_hand(mob/living/carbon/M)
 	statue_fatten(M)
 
-/obj/structure/statue/calorite/fatty/attack_paw(mob/living/carbon/M)
+/obj/structure/statue/gainium/fatty/attack_paw(mob/living/carbon/M)
 	statue_fatten(M)

@@ -8,14 +8,14 @@
 	result = /obj/item/metal_food/mburger
 	subcategory = CAT_MISCELLANEOUS //CAT_BURGER
 
-/datum/crafting_recipe/food/mburger_calorite
+/datum/crafting_recipe/food/mburger_gainium
 	name = "Calotite Burger"
 	reqs = list(
 		/obj/item/stack/sheet/mineral/gold = 1,
-		/obj/item/stack/sheet/mineral/calorite = 1,
+		/obj/item/stack/sheet/mineral/gainium = 1,
 		/obj/item/stack/sheet/metal = 1
 	)
-	result = /obj/item/metal_food/mburger_calorite
+	result = /obj/item/metal_food/mburger_gainium
 	subcategory = CAT_MISCELLANEOUS //CAT_BURGER
 
 /datum/crafting_recipe/food/mfries

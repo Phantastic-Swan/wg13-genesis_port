@@ -26,28 +26,28 @@
 	wearer.weight_gain_rate = (wearer.weight_gain_rate / weight_gain_rate_modifier)
 
 
-/obj/item/clothing/neck/petcollar/calorite
-	name = "calorite collar"
-	desc = "A modified pet collar infused with calorite, magnifying the caloric impact of any food the wearer eats"
+/obj/item/clothing/neck/petcollar/gainium
+	name = "gainium collar"
+	desc = "A modified pet collar infused with gainium, magnifying the caloric impact of any food the wearer eats"
 	weight_gain_rate_modifier = 1.5
 
-/obj/item/clothing/neck/petcollar/locked/calorite
-	name = "locked calorite collar"
-	desc = "A modified locked collar infused with calorite, magnifying the caloric impact of any food the wearer eats"
+/obj/item/clothing/neck/petcollar/locked/gainium
+	name = "locked gainium collar"
+	desc = "A modified locked collar infused with gainium, magnifying the caloric impact of any food the wearer eats"
 	weight_gain_rate_modifier = 1.5
 
-/datum/crafting_recipe/calorite_collar
-	name = "Calorite Collar"
-	result = /obj/item/clothing/neck/petcollar/calorite
+/datum/crafting_recipe/gainium_collar
+	name = "Gainium Collar"
+	result = /obj/item/clothing/neck/petcollar/gainium
 	time = 25
 	reqs = list(/obj/item/clothing/neck/petcollar = 1,
-				/obj/item/stack/sheet/mineral/calorite = 3)
+				/obj/item/stack/sheet/mineral/gainium = 3)
 	category = CAT_CLOTHING
 
-/datum/crafting_recipe/locked_calorite_collar
-	name = "Locked Calorite Collar"
-	result = /obj/item/clothing/neck/petcollar/locked/calorite
+/datum/crafting_recipe/locked_gainium_collar
+	name = "Locked Gainium Collar"
+	result = /obj/item/clothing/neck/petcollar/locked/gainium
 	time = 25
 	reqs = list(/obj/item/clothing/neck/petcollar/locked = 1,
-				/obj/item/stack/sheet/mineral/calorite = 3)
+				/obj/item/stack/sheet/mineral/gainium = 3)
 	category = CAT_CLOTHING

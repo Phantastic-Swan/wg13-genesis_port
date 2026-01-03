@@ -53,10 +53,8 @@ const MATERIAL_ICONS: Record<string, [number, string][]> = {
     [17, 'sheet-plastic_2'],
     [34, 'sheet-plastic_3'],
   ],
-  // GS13 EDIT - adds calorite display
-  calorite: [
-    [0, 'sheet-calorite']
-  ],
+  // GS13 EDIT - adds gainium display
+  gainium: [[0, 'sheet-gainium']],
   // GS13 END EDIT
 };
 

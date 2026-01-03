@@ -227,9 +227,7 @@
 		/turf/closed/mineral/gibtonite/volcanic = 4,
 		/obj/item/stack/ore/diamond = 1,
 		/obj/item/stack/ore/bluespace_crystal = 1,
-		// GS13 EDIT - calorite
-		/obj/item/stack/ore/calorite = 1
-		// GS13 END EDIT
+		/obj/item/stack/ore/gainium = 40 //WG13 Ore
 		)
 
 /turf/closed/mineral/strange_rock/ice
@@ -259,6 +257,7 @@
 		/turf/closed/mineral/gibtonite/ice/icemoon = 4,
 		/obj/item/stack/ore/diamond = 1,
 		/obj/item/stack/ore/bluespace_crystal = 1,
+		/obj/item/stack/ore/gainium = 40 //WG13 Ore
 		)
 
 /turf/closed/mineral/random/snow/underground
@@ -279,6 +278,7 @@
 		/obj/item/stack/ore/diamond = 4,
 		/obj/item/stack/ore/bluespace_crystal = 2,
 		/obj/item/stack/ore/bananium = 1,
+		/obj/item/stack/ore/gainium = 40 //WG13 Ore
 		)
 
 //small gibonite fix
@@ -319,6 +319,7 @@
 		/turf/closed/mineral/gibtonite/asteroid = 4,
 		/obj/item/stack/ore/bluespace_crystal = 1,
 		/obj/item/stack/ore/diamond = 1,
+		/obj/item/stack/ore/gainium = 40 //WG13 Ore
 		)
 
 #undef DIG_UNDEFINED

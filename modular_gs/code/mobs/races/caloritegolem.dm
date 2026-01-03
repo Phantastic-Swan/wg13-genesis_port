@@ -1,11 +1,11 @@
 var/charges = 3
 
-/datum/species/golem/calorite //golems that heal people around them, and cook groovy food. essentially the support class of golems
-	name = "Calorite Golem"
-	id = "calorite golem"
-	prefix = "Calorite"
+/datum/species/golem/gainium //golems that heal people around them, and cook groovy food. essentially the support class of golems
+	name = "Gainium Golem"
+	id = "gainium golem"
+	prefix = "Gainium"
 	special_names = list("Callie Wright")
-	info_text = "As a <span class='danger'>Calorite Golem</span>, you have all kinds of cool magical abilities that allow you to heal the wounded, make food more nourishing and boost people's speed! Unfortunately, you are also very flimsy, and can't dish out much damage with your hands."
+	info_text = "As a <span class='danger'>Gainium Golem</span>, you have all kinds of cool magical abilities that allow you to heal the wounded, make food more nourishing and boost people's speed! Unfortunately, you are also very flimsy, and can't dish out much damage with your hands."
 	fixed_mut_color = "ffffff"
 	limbs_id = "cal_golem" //special sprites
 	attack_verb = "bop" //they don't hit too hard, so their attack verb is fittingly pretty soft
@@ -18,7 +18,7 @@ var/charges = 3
 	var/datum/action/innate/unburden/speed
 	var/datum/action/innate/recharge/power
 
-/datum/species/golem/calorite/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+/datum/species/golem/gainium/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	if(ishuman(C))
 		heal = new
@@ -30,7 +30,7 @@ var/charges = 3
 		power = new
 		power.Grant(C)
 
-/datum/species/golem/calorite/on_species_loss(mob/living/carbon/C)
+/datum/species/golem/gainium/on_species_loss(mob/living/carbon/C)
 	if(heal)
 		heal.Remove(C)
 	if(boost)
@@ -99,7 +99,7 @@ var/charges = 3
 			for(var/mob/living/L in view(3, owner))
 				if(iscarbon(L))
 					if(!L.has_movespeed_modifier(/datum/movespeed_modifier/reagent/stimulants))
-						L.reagents.add_reagent(/datum/reagent/consumable/caloriteblessing, 5)
+						L.reagents.add_reagent(/datum/reagent/consumable/gainiumblessing, 5)
 
 	else
 		to_chat(owner, "<span class='notice'>You need to recharge...</span>")

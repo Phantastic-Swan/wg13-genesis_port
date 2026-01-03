@@ -12,7 +12,7 @@
 	icon_state = "turretCover"
 	base_icon_state = "standard"
 	faction = list(ROLE_SYNDICATE)
-	desc = "A laser turret with calorite focusing lens."
+	desc = "A laser turret with gainium focusing lens."
 
 /obj/machinery/porta_turret/fattening/heavy
 	name = "Heavy Fatoray Turret"
