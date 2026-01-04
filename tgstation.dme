@@ -9973,5 +9973,6 @@
 #include "modular_zubbers\modules\wood_walls\code\new_floors.dm"
 #include "world_genesis\code\immobilizer_cuffs.dm"
 #include "world_genesis\code\wg_vendors.dm"
+#include "world_genesis\code\obj\weapons\caloray.dm"
 // END_INCLUDE
 
