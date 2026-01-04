@@ -1205,15 +1205,17 @@
 
 // Donation reward for 1ceres
 /obj/item/poster/korpstech
-	name = "Korps Genetics poster"
+	name = "Cheri Follower Poster"
 	poster_type = /obj/structure/sign/poster/contraband/korpstech
 	icon_state = "rolled_poster"
+	//WG13 Replacement Texture Edit
 
 /obj/structure/sign/poster/contraband/korpstech
-	name = "Korps Genetics"
-	desc = "This poster bears a huge, pink helix on it, with smaller text underneath it that reads 'The Korps institute, advancing the Genetics field since 2423!'"
+	name = "She Lives!"
+	desc = "OUR BLESSED ANGEL! A poster depicting beloved World Genesis mascot Cheri, albeit with an unusual air of reverence.  It is unknown why WG has banned this particular print on their stations."
 	icon = 'modular_skyrat/modules/aesthetics/posters/contraband.dmi'
 	icon_state = "korpsposter"
+	//WG13 Replacement Texture Edit
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/poster/contraband/korpstech, 32)
 

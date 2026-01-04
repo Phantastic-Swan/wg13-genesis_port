@@ -28,5 +28,5 @@
 /datum/crafting_recipe/fat_mask
 	name = "Drone Mask"
 	result = /obj/item/clothing/mask/gas/fattening
-	reqs = list(/obj/item/stack/sheet/mineral/calorite = 1, /obj/item/clothing/mask/gas = 1)
+	reqs = list(/obj/item/stack/sheet/mineral/gainium = 1, /obj/item/clothing/mask/gas = 1)
 	category = CAT_CLOTHING

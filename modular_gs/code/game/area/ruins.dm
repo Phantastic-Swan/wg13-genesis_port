@@ -16,8 +16,8 @@
 	new /obj/item/stack/cable_coil(src, 15)
 	new /obj/item/stack/sheet/metal/twenty(src)
 
-/area/ruin/unpowered/caloriteshrine
-	name = "Calorite Shrine"
+/area/ruin/unpowered/gainiumshrine
+	name = "Gainium Shrine"
 	icon_state = "away"
 
 /area/ruin/powered/snackstore

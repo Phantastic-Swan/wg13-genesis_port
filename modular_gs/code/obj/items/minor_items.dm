@@ -32,8 +32,8 @@
 /obj/item/reagent_containers/glass/beaker/extilphite
 	list_reagents = list(/datum/reagent/consumable/extilphite = 50)
 
-/obj/item/reagent_containers/glass/beaker/calorite_blessing
-	list_reagents = list(/datum/reagent/consumable/caloriteblessing = 50)
+/obj/item/reagent_containers/glass/beaker/gainium_blessing
+	list_reagents = list(/datum/reagent/consumable/gainiumblessing = 50)
 
 /obj/item/reagent_containers/glass/beaker/flatulose
 	list_reagents = list(/datum/reagent/consumable/flatulose = 50)
@@ -243,7 +243,7 @@
 //weapon prefabs
 
 /obj/item/melee/curator_whip/fattening
-	name = "calorite-lined whip"
+	name = "gainium-lined whip"
 	desc = "The whip seems to glisten with an orange gleam inbetween its threads."
 	damtype = "fat"
 	attack_verb = list("fattened")
@@ -257,8 +257,8 @@
 	force = 20
 
 /obj/item/gavelhammer/fattening
-	desc = "Some madman managed to create a weapon out of calorite... Luckily, it has a rubber handle for you to wield."
-	name = "Calorite Hammer"
+	desc = "Some madman managed to create a weapon out of gainium... Luckily, it has a rubber handle for you to wield."
+	name = "Gainium Hammer"
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "toyhammer"
 	damtype = "fat"

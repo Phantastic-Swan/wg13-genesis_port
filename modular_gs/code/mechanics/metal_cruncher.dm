@@ -52,7 +52,7 @@
 	crunch_value = 1
 /obj/item/stack/sheet/cardboard
 	crunch_value = 1
-/obj/item/stack/sheet/mineral/calorite
+/obj/item/stack/sheet/mineral/gainium
 	crunch_value = 100
 /obj/item/stack/sheet/mineral/sandstone
 	crunch_value = 1
